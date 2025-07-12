@@ -1,0 +1,81 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 30em;
+    margin-top: 2em;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
+    padding: 1em;
+    height: 25em;
+    width: 30em;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 3em;
+}
+.h1{
+    margin: auto;
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+#input{
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    text-align: center;
+}
+#celsius{
+    border-radius: 0.5em;
+}
+#fahrenheit{
+    border-radius: 0.5em;
+}
+#kelvin{
+    border-radius: 0.5em;
+}
+.value{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 1em;
+    flex-direction: column;
+    align-items: center;
+}
+#celsius-value{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin: 0.5em;
+}
+#fahrenheit-value{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin: 0.5em;
+}
+#kelvin-value{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin: 0.5em;
+}
