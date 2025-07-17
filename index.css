@@ -1,81 +1,232 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 30em;
-    margin-top: 2em;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 0.5em;
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 1em;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  max-width: 25em;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 1em;
+  padding: 1.5em;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1),
+    0 0 100px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.h1 {
+  color: #2c3e50;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+#input {
+  width: 90%;
+  max-width: 250px;
+  padding: 0.7em 1em;
+  border: 2px solid rgba(225, 232, 237, 0.8);
+  border-radius: 0.7em;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#input:focus {
+  border-color: #667eea;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05),
+    0 0 0 3px rgba(102, 126, 234, 0.1);
+  transform: translateY(-1px);
+}
+
+.unite {
+  display: flex;
+  gap: 0.8em;
+  margin: 1em 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#celsius,
+#fahrenheit,
+#kelvin {
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 0.7em;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#celsius {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+#fahrenheit {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+}
+
+#kelvin {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: white;
+}
+
+#celsius:hover,
+#fahrenheit:hover,
+#kelvin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#celsius:active,
+#fahrenheit:active,
+#kelvin:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8em;
+  margin-top: 0.5em;
+  padding: 1.2em;
+  background: rgba(248, 249, 250, 0.9);
+  border-radius: 0.8em;
+  width: 90%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#celsius-value,
+#fahrenheit-value,
+#kelvin-value {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  padding: 0.5em 0.8em;
+  border-radius: 0.5em;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#celsius-value {
+  background: linear-gradient(
+    135deg,
+    rgba(79, 172, 254, 0.1) 0%,
+    rgba(0, 242, 254, 0.1) 100%
+  );
+  border: 1px solid rgba(79, 172, 254, 0.2);
+}
+
+#fahrenheit-value {
+  background: linear-gradient(
+    135deg,
+    rgba(67, 233, 123, 0.1) 0%,
+    rgba(56, 249, 215, 0.1) 100%
+  );
+  border: 1px solid rgba(67, 233, 123, 0.2);
+}
+
+#kelvin-value {
+  background: linear-gradient(
+    135deg,
+    rgba(250, 112, 154, 0.1) 0%,
+    rgba(254, 225, 64, 0.1) 100%
+  );
+  border: 1px solid rgba(250, 112, 154, 0.2);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0.8em;
+  }
+
+  .container {
+    margin: 0;
+    padding: 1.2em;
+  }
+
+  .unite {
+    gap: 0.6em;
+  }
+
+  #celsius,
+  #fahrenheit,
+  #kelvin {
+    padding: 0.6em 1em;
+    font-size: 0.85em;
+  }
+
+  .value {
     padding: 1em;
-    height: 25em;
-    width: 30em;
+  }
+
+  .h1 {
+    font-size: 1.6em;
+  }
 }
-.content{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 0;
-    margin-top: 3em;
+
+@keyframes valueUpdate {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
-.h1{
-    margin: auto;
-    font-size: 2em;
-    font-weight: bold;
-    color: #000000;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-}
-#input{
-    max-width: 300px;
-    margin: 0 auto;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    text-align: center;
-}
-#celsius{
-    border-radius: 0.5em;
-}
-#fahrenheit{
-    border-radius: 0.5em;
-}
-#kelvin{
-    border-radius: 0.5em;
-}
-.value{
-    display: flex;
-    justify-content:space-evenly;
-    margin-top: 1em;
-    flex-direction: column;
-    align-items: center;
-}
-#celsius-value{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #000000;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    margin: 0.5em;
-}
-#fahrenheit-value{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #000000;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    margin: 0.5em;
-}
-#kelvin-value{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #000000;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-    margin: 0.5em;
+
+#celsius-value.updated,
+#fahrenheit-value.updated,
+#kelvin-value.updated {
+  animation: valueUpdate 0.3s ease-out;
 }
